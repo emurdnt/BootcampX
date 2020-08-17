@@ -16,3 +16,4 @@ CREATE TABLE students(
   cohort_id INTEGER REFERENCES cohorts(id) ON DELETE CASCADE
 );
 
+
