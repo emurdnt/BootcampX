@@ -1,6 +1,6 @@
-SELECT teachers.name as teacher, students.name as students, assignments.name as assignments, (assistance_requests.completed_at - assistance_requests.started_at) as duration
+SELECT teachers.name as teacher, students.name as student, assignments.name as assignment, (completed_at-started_at) as duration
 FROM assistance_requests
-JOIN teachers on assistance_requests.teacher_id = teachers.id 
-JOIN students on assistance_requests.student_id = students.id
-JOIN assignments on assistance_requests.assignment_id = assignments.id
+JOIN teachers ON teachers.id = teacher_id
+JOIN students ON students.id = student_id
+JOIN assignments ON assignments.id = assignment_id
 ORDER BY duration;
